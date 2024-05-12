@@ -1,6 +1,65 @@
-<h1>Garden Haven</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('flowerbanner.png');
+            background-size: cover; /* This ensures the background image covers the entire viewport */
+            background-repeat: no-repeat; /* This prevents the background image from repeating */
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Set the height of the body to the viewport height */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        h1 {
+            font-weight: bold;
+            font-size: 32px; /* Increase the font size */
+            text-align: center; /* Center the text */
+        }
+        .center {
+            text-align: center;
+        }
+        .password-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f3e5ab; /* Cream-colored background */
+            color: #000; /* Black text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-container {
+            text-align: center; /* Center the button horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to the Employee Portal Page!</h1>
+        <div class="button-container"> <!-- Wrap button in a container for alignment -->
+            <button class="password-button" onclick="checkPassword()">Enter Password</button>
+        </div>
+    </div>
 
-<section>
-    <h2>Garden Haven Online Shop</h2>
-    <p>Are you seeking to elevate the allure of your garden? Are the costs of outdoor materials proving prohibitive? Do you find the selection underwhelming? Look no further than Garden Haven! Our founders are committed to democratizing the art of garden design, ensuring accessibility for all. Our curated collection boasts items tailored to both novices and seasoned enthusiasts alike. Take the first step toward your dream garden today!</p>
-<section>
+    <script>
+        function checkPassword() {
+            // Prompt the user for the password
+            var password = prompt("Enter the password:");
+
+            // Check if the entered password is correct
+            if (password === "password") {
+                // Redirect to the protected page
+                window.location.href = "employee.html";
+            } else {
+                // Show an alert for incorrect password
+                alert("Incorrect password!");
+            }
+        }
+    </script>
+</body>
+</html>
